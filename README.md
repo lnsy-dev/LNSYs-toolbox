@@ -32,4 +32,4 @@ blah_generator()
 
 ```
 
-I use this in webworkers a lot to handle a largish queus
+I use this in webworkers a lot to handle a largish queus of processor heavy items. 

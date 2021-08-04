@@ -31,3 +31,5 @@ async function blah_generator(){
 blah_generator()
 
 ```
+
+I use this in webworkers a lot to handle a largish queus

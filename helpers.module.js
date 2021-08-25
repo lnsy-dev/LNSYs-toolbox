@@ -158,7 +158,7 @@ export function createNewDiv(divopt){
 
 */
 
-function ready(callbackFunction){
+export function ready(callbackFunction){
   if(document.readyState != 'loading')
     callbackFunction(event)
   else
@@ -166,7 +166,7 @@ function ready(callbackFunction){
 }
 
 
-function getURLValues(URL = window.location.href ){
+export function getURLValues(URL = window.location.href ){
   const search_params = new URLSearchParams(URL)
   let options = {}
   for (const [key, unparsed_value] of search_params) {
@@ -182,7 +182,7 @@ function getURLValues(URL = window.location.href ){
   return options
 }
 
-function setURLValues(obj){
+export function setURLValues(obj){
   let url = window.location.origin + window.location.pathname + '?'
   Object.keys(obj).forEach(key => {
     url += `&${key}=${obj[key]}`

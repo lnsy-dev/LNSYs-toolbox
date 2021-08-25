@@ -21,7 +21,6 @@ function getNewID() {
 
 function getValuesFromURL(URL = window.location.href ){
   const search_params = new URLSearchParams(URL)
-  //?&otk=admin&usk=82e2c5ff-cfea-4d83-9860-de906a5143f4
   let options = {
   }
   for (const [key, unparsed_value] of search_params) {
@@ -53,25 +52,6 @@ function getAndClearCookie(cname) {
   document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
 
   return ""
-}
-
-/*
-
-  Interpolate
-
-  Allows you to take a string and interpolate javascript
-  variables. 
-
-  so, the string: 
-
-  'hello ${place}'.interpolate({place: 'world'})
-
-*/
-
-String.prototype.interpolate = function(params) {  
-  const names = Object.keys(params);
-  const vals = Object.values(params);
-  return new Function(...names, `return \`${this}\`;`)(...vals);
 }
 
 

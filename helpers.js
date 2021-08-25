@@ -72,9 +72,9 @@ function getAndClearCookie(cname) {
 
 */
 
-function dispatch(name, detail = {}){
+function dispatch(name, detail = {}, div = document){
   const initialize_event = new CustomEvent(name, {detail: detail})
-  document.dispatchEvent(initialize_event)
+  div.dispatchEvent(initialize_event)
 }
 
 

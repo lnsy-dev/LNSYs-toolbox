@@ -37,10 +37,6 @@ function getValuesFromURL(URL = window.location.href ){
   return options
 }
 
-function parseCoord(coord){
-  return `${coord.x.toFixed(4)} ${coord.y.toFixed(4)} ${coord.z.toFixed(4)}`
-}
-
 function getAndClearCookie(cname) {
   let name = cname + "="
   let decodedCookie = decodeURIComponent(document.cookie)
@@ -131,7 +127,7 @@ const input_types = ["button",
   "url",
   "week"]
 
-export function createNewDiv(divopt){
+function createNewDiv(divopt){
   let div
   if(input_types.indexOf(divopt.type) > -1){
     div = document.createElement('input')

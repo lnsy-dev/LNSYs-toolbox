@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[
+
+
+
+
+class ${1:ElementName} extends HTMLElement {
+  connectedCallback(){
+  }
+
+  static get observedAttributes() {
+    return [];
+  }
+
+  attributeChangedCallback(name, old_value, new_value){
+    switch(name){
+      default:
+    }
+  }
+
+}
+
+customElements.define('${2:ElementTagName}', ${1:ElementName})
+
+
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>HTMLElement</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

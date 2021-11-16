@@ -54,6 +54,21 @@ function getAndClearCookie(cname) {
   return ""
 }
 
+/*
+
+For Express.js setting a cookie looks something like this:
+
+app.get('/',(req,res) => { 
+  res.cookie('chaka', JSON.stringify({
+    GITHUB_KEY: process.env.GITHUB_PERSONAL_TOKEN,
+    GITHUB_USERNAME: process.env.GITHUB_USER_NAME
+  }));
+
+  res.sendFile(`${__dirname}/blah.html`)
+})
+
+*/
+
 
 /*
 
